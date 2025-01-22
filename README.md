@@ -1,4 +1,4 @@
-# Your startup name here
+# Daily Quiz!
 
 [My Notes](notes.md)
 
