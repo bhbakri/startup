@@ -6,24 +6,25 @@ Dailyquiz.click is a website that has the user do daily questions and try to kee
 
 ## 🚀 Specification Deliverable
 
-> [!NOTE]
->  Fill in this sections as the submission artifact for this deliverable. You can refer to this [example](https://github.com/webprogramming260/startup-example/blob/main/README.md) for inspiration.
-
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
 - [✓] Proper use of Markdown
 - [✓] A concise and compelling elevator pitch
 - [✓] Description of key features
 - [✓] Description of how you will use each technology
-- [ ] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
+- [✓] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ### Elevator pitch
 
-This website is designed to challenge your general knowledge on any and all subjects, while also being a form of education by having the user either do their own research to answer the question, or by finding out new information by seeing which is the correct answer for the question of that specific day. My using a daily streak format, it also motivates users to try and keep their streak alive while also competing with their friends
+This website is designed to challenge your general knowledge on any and all subjects, while also being a form of education by having the user either do their own research to answer the question, or by finding out new information by seeing which is the correct answer for the question of that specific day. By using a daily streak format. The website also motivates users to try and keep their streak alive while also competing with their friends, further motivating all users to continue educating themselves.
 
 ### Design
-
-![Design image](Design-Login.png)![Design image](Design-Signup.png)![Design image](Design-Question.png)![Design image](Design-Streak.png)
+This is the login and Signup pages.
+![Design image](Design-Login.png)[Design image](Design-Signup.png)
+This is the page where the user will answer the question of the day.
+![Design image](Design-Question.png)
+This is where the user will be able to see other people's streaks.
+![Design image](Design-Streak.png)
 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -31,18 +32,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ```mermaid
 sequenceDiagram
     actor You
-    You-->Login: User enters the website
-    Login-->Signup: User wants to create an account
-    Signup-->Login: User has created an account and wants to log in to it
-    Login-->Daily Question: User will be directed to the daily question
-    Daily Question-->Leaderboard: User checks current leaderboard status
+    You-->Login: Enter the website
+    Login-->Signup: Create an account
+    Signup-->Login: Account created
+    Login-->Daily Question: Redirected to question of the day
+    Daily Question-->Leaderboard: Access current streak leaderboard
 ```
 
 ### Key features
 
-- Being able to select random questions every day
+- The website being able to select random questions every day from third party
 - Keeping track of the number of days you've gotten the question correct
-- A leaderboard that keeps track of the top user's scores
+- A leaderboard that keeps track of and organizes the top user's streaks
 
 ### Technologies
 
@@ -53,7 +54,7 @@ I am going to use the required technologies in the following ways.
 - **React** - React will be used to find out what answer for the question the user selected is correct or not, while also handling whether their streak needs to increase or end.
 - **Service** - The service will be used to handle the information used to login or create a new account as well as submitting the user's score and updating their streak.
 - **DB/Login** - A database will be used to handle authenticating a user's login or creating a new user.
-- **WebSocket** - TWebsocket will be used to provide up-to-date.
+- **WebSocket** - TWebsocket will be used to provide the up-to-date leaderboard.
 
 ## 🚀 AWS deliverable
 
