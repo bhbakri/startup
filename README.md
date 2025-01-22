@@ -2,21 +2,21 @@
 
 [My Notes](notes.md)
 
-Dailyquiz.click is a website that has the user do daily questions and try to keep their streak by not failing to do the daily quizzes consistently or by not failing to answer the question correctly each day. The website will also include a leaderboard to see other users' high streaks.
+Dailyquiz.click is a website that has the user do daily questions and try to keep their streak going by doing the daily quizzes consistently and by not failing to answer the question correctly each day. The website will also include a leaderboard to see other users' high streaks.
 
 ## 🚀 Specification Deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [✓] Proper use of Markdown
-- [✓] A concise and compelling elevator pitch
-- [✓] Description of key features
-- [✓] Description of how you will use each technology
-- [✓] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
+- [x] Proper use of Markdown
+- [x] A concise and compelling elevator pitch
+- [x] Description of key features
+- [x] Description of how you will use each technology
+- [x] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ### Elevator pitch
 
-This website is designed to challenge your general knowledge on any and all subjects, while also being a form of education by having the user either do their own research to answer the question, or by finding out new information by seeing which is the correct answer for the question of that specific day. By using a daily streak format. The website also motivates users to try and keep their streak alive while also competing with their friends, further motivating all users to continue educating themselves.
+This website is designed to challenge your general knowledge on any and all subjects by being asking a question about a random topic each day. The website is also a form of education that has the user either do their own research to answer the question, or find out new information by seeing which is the correct answer for the question of that specific day. By using a daily streak format. The website also motivates users to try and keep their streak alive while also competing with their friends, further motivating all users to continue educating themselves.
 
 ### Design
 This is the login and Signup pages.
@@ -28,8 +28,6 @@ This is the page where the user will answer the question of the day.
 This is where the user will be able to see other people's streaks.
 ![Design image](Design-Streak.png)
 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ```mermaid
 sequenceDiagram
@@ -62,7 +60,7 @@ I am going to use the required technologies in the following ways.
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [✓] **Server deployed and accessible with custom domain name** - [My server link](https://dailyquiz.click).
+- [x] **Server deployed and accessible with custom domain name** - [My server link](https://dailyquiz.click).
 
 ## 🚀 HTML deliverable
 
