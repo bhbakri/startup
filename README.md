@@ -2,7 +2,7 @@
 
 [My Notes](notes.md)
 
-Dailyquiz.click is a website that has the user do daily questions and try to keep their streak by not failing to do the daily quizzes consistently or by not getting the answers correct each day. The website will also include a leaderboard to see other users' high streaks.
+Dailyquiz.click is a website that has the user do daily questions and try to keep their streak by not failing to do the daily quizzes consistently or by not failing to answer the question correctly each day. The website will also include a leaderboard to see other users' high streaks.
 
 ## 🚀 Specification Deliverable
 
