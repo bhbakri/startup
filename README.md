@@ -31,8 +31,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 sequenceDiagram
     actor You
     actor Website
-    actor Login
-    You->>Login
+    You->>Website
 
 ```
 
