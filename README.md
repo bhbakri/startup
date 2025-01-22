@@ -31,8 +31,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 sequenceDiagram
     actor You
     actor Website
-    You-->Login
-
+    You-->Login: User enters the website
+    Login-->Signup: User wants to create an account
+    Signup-->Login: User has created an account and wants to log in to it
+    Login-->Daily_Question: User will be directed to the daily question
+    Daily_Question-->Leaderboard: User checks current leaderboard status
 ```
 
 ### Key features
