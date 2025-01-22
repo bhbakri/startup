@@ -20,7 +20,7 @@ This website is designed to challenge your general knowledge on any and all subj
 
 ### Design
 This is the login and Signup pages.
-![Design image](Design-Login.png)[Design image](Design-Signup.png)
+![Design image](Design-Login.png)![Design image](Design-Signup.png)
 This is the page where the user will answer the question of the day.
 ![Design image](Design-Question.png)
 This is where the user will be able to see other people's streaks.
