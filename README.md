@@ -11,7 +11,7 @@ Dailyquiz.click is a website that has the user do daily questions and try to kee
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] Proper use of Markdown
+- [✓] Proper use of Markdown
 - [✓] A concise and compelling elevator pitch
 - [✓] Description of key features
 - [✓] Description of how you will use each technology
