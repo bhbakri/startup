@@ -32,10 +32,7 @@ sequenceDiagram
     actor You
     actor Website
     You->>Login
-    Login->>Signup
-    Signup->>Login
-    Login->>Daily_Question
-    Daily_Question->>Leaderboard
+
 ```
 
 ### Key features
