@@ -31,7 +31,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 sequenceDiagram
     actor You
     actor Website
-    You->>Website: Replace this with your design
+    You->>Login
+    Login->>Signup
+    Signup->>Login
+    Login->>Daily_Question
+    Daily_Question->>Leaderboard
 ```
 
 ### Key features
