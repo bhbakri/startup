@@ -30,7 +30,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ```mermaid
 sequenceDiagram
     actor You
-    actor Website
     You-->Login: User enters the website
     Login-->Signup: User wants to create an account
     Signup-->Login: User has created an account and wants to log in to it
