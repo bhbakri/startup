@@ -29,6 +29,7 @@ This is the page where the user will answer the question of the day.
 This is where the user will be able to see other people's streaks.
 ![Design image](Design-Streak.png)
 
+Markdown:
 
 ```mermaid
 sequenceDiagram
