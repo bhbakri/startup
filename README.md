@@ -68,15 +68,15 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **HTML pages** - I did not complete this part of the deliverable.
-- [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
-- [ ] **Links** - I did not complete this part of the deliverable.
-- [ ] **Text** - I did not complete this part of the deliverable.
-- [ ] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [ ] **Images** - I did not complete this part of the deliverable.
-- [ ] **Login placeholder** - I did not complete this part of the deliverable.
-- [ ] **DB data placeholder** - I did not complete this part of the deliverable.
-- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [x] **HTML pages** - I created 5 HTML pages for each part of this website. The login, signup, quiz, leaderboard, and about pages.
+- [x] **Proper HTML element usage** - Proper use of head, body, nav, main, header, footer, and other general elements such as (a), (img), (li), (input), etc..
+- [x] **Links** - Links were used to connect all the HTML files together. It was also used to link to both BYU's website and the CS260 Github in the about page.
+- [x] **Text** - Text was used all throughout the pages to explain what each element is. It was also used to represent temporary objects and TBDs.
+- [x] **3rd party API placeholder** - A temporary piece of text was used on the quiz page to represent where the questions and answers from 3rd parties will be placed and used.
+- [x] **Images** - The only image currently used is a temporary logo in the about page. Images will be used more for backgrounds in the future.
+- [x] **Login placeholder** - Both the signup and signin inputs have been included but temporarily don't do anything. Login and signup DB connections will come later.
+- [x] **DB data placeholder** - All user streak length data and login info will be stored in a DB.
+- [x] **WebSocket placeholder** - Placeholder data was placed in the leaderboard page. It will remain this way until the leaderboard is connected through websocket.
 
 ## 🚀 CSS deliverable
 
