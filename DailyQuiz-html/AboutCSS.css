@@ -17,6 +17,16 @@ header {
     padding-left: 1vh;
 }
 
+.navItems {
+    color: black;
+    text-decoration: none;
+}
+
+.navItemsOn {
+    color: #858585;
+    text-decoration: none;
+}
+
 menu {
     display: flex;
     flex-wrap: wrap;
@@ -28,7 +38,13 @@ label {
     margin-bottom: 5px;
 }
 
+.logo {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 img {
     border-radius: 100vh;
-    border: 2vh solid #b1caec; 
+    border: 2vh solid #b1caec;
+    width:50vh
 }
