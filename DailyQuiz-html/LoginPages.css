@@ -1,0 +1,81 @@
+body {
+    font-family: Arial;
+    background-color: #DCE6F1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif; 
+}
+
+header {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    background-color: #b1caec;
+    font-style:bold;
+    font-size:2vh;
+    border-radius: 2vh;
+    padding-left: 1vh;
+}
+
+menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+.SignInContainer {
+
+    width: 50vh;
+    background-color: #b1caec;
+    border-radius: 3vh;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.SignIn {
+    display: flex;
+    flex-direction: column;
+    margin: 2vh;
+}
+
+.Interactables {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-size:3vh;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 90%;
+    padding: 2vh;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 2vh;
+    padding:1vh;
+    font-size:3vh;
+    background-color: #709fe0;
+    color: #ffffff;
+    border: none;
+    border-radius: 1vh;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #77afff;
+}
