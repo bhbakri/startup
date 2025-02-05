@@ -2,7 +2,6 @@ body {
     background-color: #DCE6F1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif; 
 }
 
@@ -17,59 +16,23 @@ header {
     padding-left: 1vh;
 }
 
-.navItems {
-    color: black;
-}
-
-.navItemsOn {
-    color: #858585;
-}
-
-
-menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 4vh;
     margin-bottom: 4vh;
+    margin-left: 5vh;
+    margin-right: 5vh;
 }
 
-.SignInContainer {
-
-    width: 50vh;
-    background-color: #b1caec;
-    border-radius: 3vh;
-    box-shadow: 0px 0px 10px #0000001a;
+.answers {
+    margin:2vh;
 }
 
-.SignIn {
-    display: flex;
-    flex-direction: column;
-    margin: 2vh;
-}
-
-.Interactables {
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    font-size:3vh;
-}
-
-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-input {
-    width: 90%;
-    padding: 2vh;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+p {
+    font-size: 2vh;
 }
 
 button {
@@ -84,10 +47,31 @@ button {
     transition: background-color 0.3s ease;
 }
 
+button:hover {
+    background-color: #77afff;
+}
+
 a {
     text-decoration: none;
 }
 
-button:hover {
-    background-color: #77afff;
+.navItems {
+    color: black;
+    text-decoration: none;
+}
+
+.navItemsOn {
+    color: #858585;
+    text-decoration: none;
+}
+
+menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
 }

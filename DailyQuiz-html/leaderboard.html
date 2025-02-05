@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="BoardCSS.css">
     <title>Leaderboard</title>
   </head>
 
@@ -10,19 +11,19 @@
     <header>
         <h1>Leaderboard</h1>
         <nav>
-            <menu>
-            <li><a href="index.html">Home</a></li>
-              <li><a href="signup.html">Signup</a></li>
-              <li><a href="quiz.html">Quiz</a></li>
-              <li><a href="leaderboard.html">Leaderboard</a></li>
-              <li><a href="about.html">About</a></li>
+          <menu>
+            <li><a class="navItems" href="index.html">Home</a></li>
+              <li><a class="navItems" href="signup.html">Signup</a></li>
+              <li><a class="navItems" href="quiz.html">Quiz</a></li>
+              <li><a class="navItemsOn" href="leaderboard.html">Leaderboard</a></li>
+              <li><a class="navItems" href="about.html">About</a></li>
             </menu>
           </nav>
           <hr />
       </header>
     <main>
-      <h1>(Username)</h1>
-      <h1>Your Streak: 36 (Temp number)</h1>
+      <h1>Hi (Username)!</h1>
+      <h1 class="streak">Your Streak: 36🔥(Temp number)</h1>
       <h2>(Database will keep track of all the current scores that aren't on the leaderboard, including yours)</h2>
       <h1>
         Top 10 Users' Streaks!
@@ -77,7 +78,7 @@
     </main>
     <footer>
         <hr />
-        <p>Bassem Bakri</p>
+        <h2>Bassem Bakri</h2>
         <a href="https://github.com/bhbakri/startup">Website GitHub</a>
     </footer>
   </body>

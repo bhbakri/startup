@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="QuizPage.css">
     <title>The Quiz</title>
   </head>
 
@@ -21,23 +22,21 @@
           <hr />
       </header>
     <main>
-      <div>
         <h1>(Username)</h1>
         <h1>The Daily Question</h1>
         <h2>(Placeholder for 3rd party call to recieve a random question for the day)</h2>
       </div>
-      <div>
-          <p></p>
-          <input type="radio">
-          <labe>Answer 1</label><br>
-          <input type="radio">
+      <p>
+          <input type="radio" class="answers">
+          <label >Answer 1</label><br>
+          <input type="radio" class="answers">
           <label>Answer 2</label><br>
-          <input type="radio">
+          <input type="radio" class="answers">
           <label>Answer 3</label><br>
-          <input type="radio">
+          <input type="radio" class="answers">
           <label>Answer 4</label><br>
           <button><a href="leaderboard.html">Submit Answer</a></button>
-      </div>
+      </p>
       <h2>(React will be used to check if answer is correct, then DB will be used to update user's score. It will also make sure only 1 answer is selected)</h2>
     </main>
     <footer>
