@@ -82,9 +82,9 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [x] **Header, footer, and main content body** - I added CSS elements that allowed for all elements in the header, footer, and main body to change size depending on the height and width of the screen displaying it.
+- [x] **Header, footer, and main content body** - I added CSS elements that allowed for all elements in the header, footer, and main body to change size depending on the height and width of the screen displaying it. Flex was also used to organize all 3 elements.
 - [x] **Navigation elements** - I Used CSS to create a streamlined and visually pleasing navigation bar at the top of the website that's always present. It is also reactive, allowing the user to see which page they're on.
-- [x] **Responsive to window resizing** - Every feature on the website was scaled using "vh" and "vw" when necessary, in order for it to display correctly on all devices.
+- [x] **Responsive to window resizing** - Every feature on the website was scaled using "vh" and "vw" when necessary, in order for it to display correctly on all devices. Flex was also used very often to ensure that the page is well organized and resizes well.
 - [x] **Application elements** - The table meant to present the Websocket data has been updated using CSS to give it a much stronger visual appeal. The quiz page and its temporary question and answers also have CSS elements in preparation for the implementation of a 3rd party service.
 - [x] **Application text content** - Fond size and color CSS elements were added onto all the text content within the website.
 - [x] **Application images** - The website itself lacks images, however the Logo in the about page has some CSS elements applied to it, giving it a border, centering it, and allowing it to change size to present properly to all devices.
