@@ -24,7 +24,7 @@ main {
 
 .SignInContainer {
 
-    width: 50vh;
+    width: 30vw;
     background-color: #b1caec;
     border-radius: 3vh;
     box-shadow: 0px 0px 10px #0000001a;
@@ -37,8 +37,8 @@ main {
 }
 
 .Interactables {
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     font-size:3vh;
 }
 
@@ -47,11 +47,11 @@ label {
     margin-bottom: 5px;
 }
 
-input {
+.inputs {
     width: 90%;
-    padding: 2vh;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 1vw;
+    border: 1px;
+    border-radius: 20px;
 }
 
 button {
