@@ -1,4 +1,4 @@
-body {
+.body {
     background-color: #DCE6F1;
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@ body {
     font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif; 
 }
 
-header {
+.header {
     display: flex;
     justify-content:flex-start;
     align-items: center;
@@ -15,4 +15,35 @@ header {
     font-size:2vh;
     border-radius: 2vh;
     padding-left: 1vh;
+}
+
+.headerPadding {
+    padding-left: 1vh;
+    padding-right: 1vh;
+    padding-top: 1vh;
+}
+
+
+.navItems {
+    color: black;
+}
+
+.navItemsOn {
+    color: #858585;
+}
+
+
+menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+main {
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
+a {
+    text-decoration: none;
 }
