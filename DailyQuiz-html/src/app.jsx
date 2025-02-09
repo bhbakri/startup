@@ -16,7 +16,7 @@ export default function App() {
         <h1>Daily Quiz</h1>
         <nav>
             <menu>
-            <li><NavLink className="navItemsOn" to="">Home</NavLink></li>
+            <li><NavLink className="navItems" to="">Home</NavLink></li>
               <li><NavLink className="navItems" to="signup">Signup</NavLink></li>
               <li><NavLink className="navItems" to="quiz">Quiz</NavLink></li>
               <li><NavLink className="navItems" to="leaderboard">Leaderboard</NavLink></li>
@@ -44,5 +44,5 @@ export default function App() {
 }
 
 function NotFound() {
-  return <main className='container-fluid bg-secondary text-center'>404: Return to sender. Address unknown.</main>;
+  return <main className='body'>404: Return to sender. Address unknown.</main>;
 }
