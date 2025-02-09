@@ -1,21 +1,4 @@
-body {
-    background-color: #DCE6F1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif; 
-}
 
-header {
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    background-color: #b1caec;
-    font-style:bold;
-    font-size:2vh;
-    border-radius: 2vh;
-    padding-left: 1vh;
-}
 
 .navItems {
     color: black;

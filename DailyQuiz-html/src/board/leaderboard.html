@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="BoardCSS.css">
+    <link rel="stylesheet" href="Main.css">
+    <title>Leaderboard</title>
+  </head>
+
+  <body>
+    <header>
+        <h1>Leaderboard</h1>
+        <nav>
+          <menu>
+            <li><a class="navItems" href="index.html">Home</a></li>
+              <li><a class="navItems" href="signup.html">Signup</a></li>
+              <li><a class="navItems" href="quiz.html">Quiz</a></li>
+              <li><a class="navItemsOn" href="leaderboard.html">Leaderboard</a></li>
+              <li><a class="navItems" href="about.html">About</a></li>
+            </menu>
+          </nav>
+          <hr />
+      </header>
+    <main>
+      <h1>Hi (Username)!</h1>
+      <h1 class="streak">Your Streak: 36🔥(Temp number)</h1>
+      <h2>(Database will keep track of all the current scores that aren't on the leaderboard, including yours)</h2>
+      <h1>
+        Top 10 Users' Streaks!
+      </h1>
+      <table>
+        <tr>
+          <th>Username</th>
+          <th>Streak (days)</th>
+        </tr>
+        <tr>
+          <td>User 1</td>
+          <td>273</td>
+        </tr>
+        <tr>
+          <td>User 2</td>
+          <td>234</td>
+        </tr>
+        <tr>
+          <td>User 3</td>
+          <td>193</td>
+        </tr>
+        <tr>
+          <td>User 4</td>
+          <td>173</td>
+        </tr>
+        <tr>
+          <td>User 5</td>
+          <td>157</td>
+        </tr>
+        <tr>
+          <td>User 6</td>
+          <td>123</td>
+        </tr>
+        <tr>
+          <td>User 7</td>
+          <td>95</td>
+        </tr>
+        <tr>
+          <td>User 8</td>
+          <td>71</td>
+        </tr>
+        <tr>
+          <td>User 9</td>
+          <td>43</td>
+        </tr>
+        <tr>
+          <td>User 10</td>
+          <td>39</td>
+        </tr>
+      </table>
+      <h2>(Temporary Data in table, websocket used to instantly update users' streaks)</h2>
+    </main>
+    <footer>
+        <hr />
+        <h2>Bassem Bakri</h2>
+        <a href="https://github.com/bhbakri/startup">Website GitHub</a>
+    </footer>
+  </body>
