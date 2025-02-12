@@ -1,6 +1,6 @@
 import React from 'react';
 import "./QuizPage.css"
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export function Quiz() {
   return (
@@ -17,7 +17,7 @@ export function Quiz() {
         <label>Answer 3</label><br></br>
         <input type="radio" class="answers"></input>
         <label>Answer 4</label><br></br>
-        <button><NavLink to="/leaderboard">Submit Answer</NavLink></button>
+        <button><Link to="/leaderboard">Submit Answer</Link></button>
     </p>
     <h2>(React will be used to check if answer is correct, then DB will be used to update user's score. It will also make sure only 1 answer is selected)</h2>
   </main>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export function Signup() {
   return (
@@ -21,7 +21,7 @@ export function Signup() {
                     <input className="inputs" type="password" placeholder="Enter Password Again" name="password" required></input>
                 </div>
                 <div >
-                    <button><NavLink to="/">Sign In</NavLink></button>
+                    <button><Link to="/">Sign In</Link></button>
                 </div>
             </div>
         </div>
