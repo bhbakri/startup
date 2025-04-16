@@ -118,11 +118,11 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [x] **User registration** - I did not complete this part of the deliverable.
-- [x] **User login and logout** - I did not complete this part of the deliverable.
-- [x] **Stores data in MongoDB** - I did not complete this part of the deliverable.
-- [x] **Stores credentials in MongoDB** - I did not complete this part of the deliverable.
-- [x] **Restricts functionality based on authentication** - I did not complete this part of the deliverable.
+- [x] **User registration** - Added a user signup system using a backend endpoint ("/api/auth/create") that stores new user accounts securely in the MongoDB database.
+- [x] **User login and logout** - The login is now fully functiontional ("/api/auth/login") as well as the logout ("/api/auth/logout"), and both are using  session cookies to maintain an authenticated state.
+- [x] **Stores data in MongoDB** - All quiz data including streaks, daily attempts, and user profiles are stored in MongoDB collections as "users", "streaks", and "attempts".
+- [x] **Stores credentials in MongoDB** - User credentials are hashed using "bcrypt" and stored in MongoDB. None of the passwords are stored as simple plain text.
+- [x] **Restricts functionality based on authentication** - Backend routes like "/api/quiz/status", "/api/streak", and "/api/quiz/question" now require authentication and reject unauthenticated users with a 401 error.
 
 ## 🚀 WebSocket deliverable
 
