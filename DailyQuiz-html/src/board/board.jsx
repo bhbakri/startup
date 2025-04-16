@@ -1,62 +1,46 @@
-import React from 'react';
-import "./BoardCSS.css"
+import React, { useEffect, useState } from 'react';
+import './BoardCSS.css';
 
 export function Board() {
+  const [topUsers, setTopUsers] = useState([]);
+  const [currentStreak, setCurrentStreak] = useState(0);
+  const currentUser = localStorage.getItem("currentUser");
+
+  useEffect(() => {
+    const streaks = JSON.parse(localStorage.getItem("streaks")) || {};
+
+    // Sort
+    const sorted = Object.entries(streaks)
+      .sort((a, b) => b[1] - a[1]) 
+      .slice(0, 10); // top 10 only
+
+    setTopUsers(sorted);
+    setCurrentStreak(streaks[currentUser] || 0);
+  }, [currentUser]);
+
   return (
     <main>
-      <h1>Hi (Username)!</h1>
-      <h1 class="streak">Your Streak: 36🔥(Temp number)</h1>
+      <h1>Hi {currentUser || 'Guest'}!</h1>
+      <h1 className="streak">Your Streak: {currentStreak}🔥</h1>
       <h2>(Database will keep track of all the current scores that aren't on the leaderboard, including yours)</h2>
-      <h1>
-        Top 10 Users' Streaks!
-      </h1>
+
+      <h1>Top 10 Users' Streaks!</h1>
       <table>
-        <tr>
-          <th>Username</th>
-          <th>Streak (days)</th>
-        </tr>
-        <tr>
-          <td>User 1</td>
-          <td>273</td>
-        </tr>
-        <tr>
-          <td>User 2</td>
-          <td>234</td>
-        </tr>
-        <tr>
-          <td>User 3</td>
-          <td>193</td>
-        </tr>
-        <tr>
-          <td>User 4</td>
-          <td>173</td>
-        </tr>
-        <tr>
-          <td>User 5</td>
-          <td>157</td>
-        </tr>
-        <tr>
-          <td>User 6</td>
-          <td>123</td>
-        </tr>
-        <tr>
-          <td>User 7</td>
-          <td>95</td>
-        </tr>
-        <tr>
-          <td>User 8</td>
-          <td>71</td>
-        </tr>
-        <tr>
-          <td>User 9</td>
-          <td>43</td>
-        </tr>
-        <tr>
-          <td>User 10</td>
-          <td>39</td>
-        </tr>
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Streak (days)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {topUsers.map(([user, streak], index) => (
+            <tr key={index}>
+              <td>{user}</td>
+              <td>{streak}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
-      <h2>(Temporary Data in table, websocket used to instantly update users' streaks)</h2>
     </main>
   );
 }
