@@ -66,7 +66,6 @@ apiRouter.post('/auth/login', async (req, res) => {
   if (user && await bcrypt.compare(password, user.password)) {
     user.token = uuid.v4(); // new login session
 
-    // 🔧 Persist the new token in the DB
     await db.collection('users').updateOne(
       { username: user.username },
       { $set: { token: user.token } }

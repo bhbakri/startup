@@ -23,8 +23,7 @@ export function Login() {
   
       const data = await response.json();
       setMessage(`Welcome back, ${data.username}!`);
-  
-      // ⏳ Wait a moment to ensure the cookie is registered
+
       setTimeout(async () => {
         try {
           const statusRes = await fetch('/api/quiz/status', {
@@ -41,7 +40,7 @@ export function Login() {
         } catch (err) {
           setMessage(err.message);
         }
-      }, 500); // half a second should be enough
+      }, 500);
     } catch (err) {
       setMessage(err.message);
     }

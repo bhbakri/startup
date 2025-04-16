@@ -31,7 +31,6 @@ export function Board() {
     <main>
       <h1>Hi {currentUser}!</h1>
       <h1 className="streak">Your Streak: {currentStreak}🔥</h1>
-      <h2>(Database tracks everyone’s streak — even if not top 10)</h2>
 
       <h1>Top 10 Users' Streaks!</h1>
       <table>
