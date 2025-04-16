@@ -13,22 +13,40 @@ export function Login() {
       const response = await fetch('/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
         body: JSON.stringify({ username, password }),
       });
-
+  
       if (!response.ok) {
         throw new Error('Invalid username or password.');
       }
-
+  
       const data = await response.json();
       setMessage(`Welcome back, ${data.username}!`);
-
-      // Redirect after brief delay
-      setTimeout(() => navigate('/quiz'), 1000);
+  
+      // ⏳ Wait a moment to ensure the cookie is registered
+      setTimeout(async () => {
+        try {
+          const statusRes = await fetch('/api/quiz/status', {
+            method: 'GET',
+            credentials: 'include',
+          });
+  
+          if (!statusRes.ok) {
+            throw new Error('Could not verify quiz status.');
+          }
+  
+          const { canPlay } = await statusRes.json();
+          navigate(canPlay ? '/quiz' : '/leaderboard');
+        } catch (err) {
+          setMessage(err.message);
+        }
+      }, 500); // half a second should be enough
     } catch (err) {
       setMessage(err.message);
     }
   };
+  
 
   return (
     <main>

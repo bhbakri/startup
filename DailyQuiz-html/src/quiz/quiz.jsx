@@ -37,7 +37,7 @@ export function Quiz() {
     const isCorrect = selectedAnswer === questionData.correctIndex;
 
     try {
-      const res = await fetch('/api/streak');
+      const res = await fetch('/api/streak', { credentials: 'include' });
       const data = await res.json();
       let streak = data.streak;
 
@@ -46,10 +46,14 @@ export function Quiz() {
       await fetch('/api/streak', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
         body: JSON.stringify({ streak }),
       });
 
-      await fetch('/api/quiz/complete', { method: 'POST' });
+      await fetch('/api/quiz/complete', {
+        method: 'POST',
+        credentials: 'include'
+      });
 
       setMessage(isCorrect ? '✅ Correct!' : '❌ Incorrect.');
       setSubmitted(true);

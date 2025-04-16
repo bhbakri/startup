@@ -8,7 +8,7 @@ export function Board() {
 
   useEffect(() => {
     // Get current user's streak
-    fetch('/api/streak')
+    fetch('/api/streak', { credentials: 'include' })
       .then(res => {
         if (res.ok) return res.json();
         throw new Error('Not logged in');
@@ -22,7 +22,7 @@ export function Board() {
       });
 
     // Get top 10 streaks
-    fetch('/api/streaks')
+    fetch('/api/streaks', { credentials: 'include' })
       .then(res => res.json())
       .then(setTopUsers);
   }, []);
