@@ -108,11 +108,11 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Node.js/Express HTTP service** - I did not complete this part of the deliverable.
-- [ ] **Static middleware for frontend** - I did not complete this part of the deliverable.
-- [ ] **Calls to third party endpoints** - I did not complete this part of the deliverable.
-- [ ] **Backend service endpoints** - I did not complete this part of the deliverable.
-- [ ] **Frontend calls service endpoints** - I did not complete this part of the deliverable.
+- [x] **Node.js/Express HTTP service** - The backend was created using Node.js and express to be able to handle logings, sign ups, and streak/quiz tracking.
+- [x] **Static middleware for frontend** - I added Express static middleware to serve frontend files from the `public/` directory.
+- [x] **Calls to third party endpoints** - With the help of fetch(), i was able to call the third party endpoint of "Open Trivia Database" (https://opentdb.com) to have new questions for the website each day.
+- [x] **Backend service endpoints** - Multiple API endpoints were created for this deliverable under "/api". Some examples are "/auth/create", "/quiz/question", and more
+- [x] **Frontend calls service endpoints** - For the react frontend to interact with the backend for the services such as logging in, sign ups, quizzes, etc... "fetch()" was used.
 
 ## 🚀 DB/Login deliverable
 

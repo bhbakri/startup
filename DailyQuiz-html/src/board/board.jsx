@@ -4,25 +4,34 @@ import './BoardCSS.css';
 export function Board() {
   const [topUsers, setTopUsers] = useState([]);
   const [currentStreak, setCurrentStreak] = useState(0);
-  const currentUser = localStorage.getItem("currentUser");
+  const [currentUser, setCurrentUser] = useState('');
 
   useEffect(() => {
-    const streaks = JSON.parse(localStorage.getItem("streaks")) || {};
+    // Get current user's streak
+    fetch('/api/streak')
+      .then(res => {
+        if (res.ok) return res.json();
+        throw new Error('Not logged in');
+      })
+      .then(data => {
+        setCurrentStreak(data.streak);
+        setCurrentUser(data.username);
+      })
+      .catch(() => {
+        setCurrentUser('Guest');
+      });
 
-    // Sort
-    const sorted = Object.entries(streaks)
-      .sort((a, b) => b[1] - a[1]) 
-      .slice(0, 10); // top 10 only
-
-    setTopUsers(sorted);
-    setCurrentStreak(streaks[currentUser] || 0);
-  }, [currentUser]);
+    // Get top 10 streaks
+    fetch('/api/streaks')
+      .then(res => res.json())
+      .then(setTopUsers);
+  }, []);
 
   return (
     <main>
-      <h1>Hi {currentUser || 'Guest'}!</h1>
+      <h1>Hi {currentUser}!</h1>
       <h1 className="streak">Your Streak: {currentStreak}🔥</h1>
-      <h2>(Database will keep track of all the current scores that aren't on the leaderboard, including yours)</h2>
+      <h2>(Database tracks everyone’s streak — even if not top 10)</h2>
 
       <h1>Top 10 Users' Streaks!</h1>
       <table>
@@ -33,10 +42,10 @@ export function Board() {
           </tr>
         </thead>
         <tbody>
-          {topUsers.map(([user, streak], index) => (
+          {topUsers.map((entry, index) => (
             <tr key={index}>
-              <td>{user}</td>
-              <td>{streak}</td>
+              <td>{entry.username}</td>
+              <td>{entry.streak}</td>
             </tr>
           ))}
         </tbody>

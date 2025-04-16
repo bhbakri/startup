@@ -8,18 +8,32 @@ export function Signup() {
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
-  const handleSignup = () => {
-    const users = JSON.parse(localStorage.getItem("users")) || {};
-    if (users[username]) {
-      setMessage("Username already exists.");
-    } else if (password !== confirm) {
+  const handleSignup = async () => {
+    if (password !== confirm) {
       setMessage("Passwords do not match.");
-    } else {
-      users[username] = password;
-      localStorage.setItem("users", JSON.stringify(users));
-      localStorage.setItem("currentUser", username);
-      setMessage("Account created!");
-      setTimeout(() => navigate('/'), 1000);
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/auth/create', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+      });
+
+      if (!response.ok) {
+        if (response.status === 409) {
+          throw new Error("Username already exists.");
+        } else {
+          throw new Error("Signup failed.");
+        }
+      }
+
+      const data = await response.json();
+      setMessage("Account created! Redirecting to login...");
+      setTimeout(() => navigate('/'), 1500);
+    } catch (err) {
+      setMessage(err.message);
     }
   };
 

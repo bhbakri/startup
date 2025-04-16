@@ -8,15 +8,25 @@ export function Login() {
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    const users = JSON.parse(localStorage.getItem("users")) || {};
+  const handleLogin = async () => {
+    try {
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+      });
 
-    if (users[username] && users[username] === password) {
-      localStorage.setItem("currentUser", username);
-      setMessage("Login successful!");
+      if (!response.ok) {
+        throw new Error('Invalid username or password.');
+      }
+
+      const data = await response.json();
+      setMessage(`Welcome back, ${data.username}!`);
+
+      // Redirect after brief delay
       setTimeout(() => navigate('/quiz'), 1000);
-    } else {
-      setMessage("Invalid username or password.");
+    } catch (err) {
+      setMessage(err.message);
     }
   };
 
