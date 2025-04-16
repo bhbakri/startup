@@ -20,6 +20,16 @@ app.use(express.static('public'));
 const apiRouter = express.Router();
 app.use('/api', apiRouter);
 
+const htmlDecode = (text) => {
+  return text
+    .replace(/&quot;/g, '"')
+    .replace(/&#039;/g, "'")
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>');
+};
+
+
 // CreateAuth a new user
 apiRouter.post('/auth/create', async (req, res) => {
   const { username, password } = req.body;
@@ -117,16 +127,19 @@ apiRouter.get('/quiz/question', verifyAuth, async (req, res) => {
         const result = trivia.results[0];
         
   
-      const answers = [...result.incorrect_answers, result.correct_answer];
+      const decodedCorrect = htmlDecode(result.correct_answer);
+      const decodedIncorrect = result.incorrect_answers.map(htmlDecode);
+      const answers = [...decodedIncorrect, decodedCorrect];
       const shuffled = answers
         .map((answer) => ({ text: answer, sort: Math.random() }))
         .sort((a, b) => a.sort - b.sort)
         .map((a) => a.text);
-  
+
       quizData[today] = {
-        question: result.question,
+        question: htmlDecode(result.question),
         answers: shuffled,
-        correctIndex: shuffled.indexOf(result.correct_answer)
+        correctIndex: shuffled.indexOf(decodedCorrect)
+
       };
     }
   
