@@ -20,7 +20,9 @@ export function Board() {
       });
   }, []);
   useEffect(() => {
-    const socket = new WebSocket('ws://localhost:4000');
+    const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
+    const host = window.location.host;
+    const socket = new WebSocket(`${protocol}://${host}`);
   
     socket.onopen = () => {
       console.log('✅ WebSocket connected to leaderboard updates');

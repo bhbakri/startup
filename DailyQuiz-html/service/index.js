@@ -252,11 +252,10 @@ function setAuthCookie(res, authToken) {
     sameSite: isProduction ? 'strict' : 'lax' // 
   });
 }
-  
-app.listen(port, () => {
-    console.log(`Startup service listening on http://localhost:${port}`);
-  });
 
 app.get('/api/test', (req, res) => {
-    res.send({ msg: "Backend is alive 🚀" });
+  res.send({ msg: "Backend is alive 🚀" });
+});
+app.listen(port, () => {
+  console.log(`Startup service listening on http://localhost:${port}`);
 });
