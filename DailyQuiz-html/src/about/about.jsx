@@ -13,7 +13,7 @@ export function About() {
         by seeing which is the correct answer for the question of that specific day. By using a daily 
         streak format. The website also motivates users to try and keep their streak alive while also 
         competing with their friends, further motivating all users to continue educating themselves.
-        (In loving memory of bob 1,2 and 3)
+        (In loving memory of bob 1, 2 and 3)
       </p>
       <p>
         This Website was made for 
