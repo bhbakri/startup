@@ -128,8 +128,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Backend listens for WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **Frontend makes WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **Data sent over WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **WebSocket data displayed** - I did not complete this part of the deliverable.
-- [ ] **Application is fully functional** - I did not complete this part of the deliverable.
+- [x] **Backend listens for WebSocket connection** – I set up a WebSocket server using the `ws` library, attached to my existing HTTP server in `index.js`. it listens for any new updates on the leaderboard and sends the data to the other browsers.
+- [x] **Frontend makes WebSocket connection** – My `Board.jsx` connects to the WebSocket server using `wss://` in production and `ws://` locally, enabling real-time communication from the client side.
+- [x] **Data sent over WebSocket connection** – When a person finishes their daily quiz and updates their streak, the backend broadcasts the top 10 leaderboard data to all connected clients over web socket.
+- [x] **WebSocket data displayed** – The leaderboard page listens for web socket messages and automatically updates the top 10 users in real time without needing to manual refresh the page.
+- [x] **Application is fully functional** – All functionality for the quiz is now fully functional. This includes the accounts system, the daily quiz attributes, database incorperation, and the leaderboard with its web socket connection.
