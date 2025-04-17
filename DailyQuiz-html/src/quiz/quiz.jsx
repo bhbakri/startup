@@ -69,6 +69,7 @@ export function Quiz() {
   return (
     <main>
       <h1>The Daily Question</h1>
+      <h4>The Quiz Resets at 12am EST</h4>
       <h2>{questionData.question}</h2>
       <form>
         {questionData.answers.map((answer, index) => (
