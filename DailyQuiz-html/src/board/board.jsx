@@ -5,9 +5,7 @@ export function Board() {
   const [topUsers, setTopUsers] = useState([]);
   const [currentStreak, setCurrentStreak] = useState(0);
   const [currentUser, setCurrentUser] = useState('');
-
   useEffect(() => {
-    // Get current user's streak
     fetch('/api/streak', { credentials: 'include' })
       .then(res => {
         if (res.ok) return res.json();
@@ -20,13 +18,36 @@ export function Board() {
       .catch(() => {
         setCurrentUser('Guest');
       });
-
-    // Get top 10 streaks
-    fetch('/api/streaks', { credentials: 'include' })
-      .then(res => res.json())
-      .then(setTopUsers);
   }, []);
-
+  useEffect(() => {
+    const socket = new WebSocket('ws://localhost:4000');
+  
+    socket.onopen = () => {
+      console.log('✅ WebSocket connected to leaderboard updates');
+    };
+  
+    socket.onmessage = (event) => {
+      const msg = JSON.parse(event.data);
+  
+      if (msg.type === 'leaderboard') {
+        console.log('📡 Received live leaderboard update:', msg.data);
+        setTopUsers(msg.data);
+      }
+    };
+  
+    socket.onerror = (error) => {
+      console.error('❌ WebSocket error:', error);
+    };
+  
+    socket.onclose = () => {
+      console.log('❌ WebSocket disconnected');
+    };
+  
+    return () => socket.close();
+  }, []);
+  
+  
+  
   return (
     <main>
       <h1>Hi {currentUser}!</h1>

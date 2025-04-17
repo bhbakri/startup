@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const uuid = require('uuid');
 const app = express();
 const fetch = require('node-fetch');
-
+const port = process.argv.length > 2 ? process.argv[2] : 4000;
 const { MongoClient } = require('mongodb');
 const config = require('./dbConfig.json');
 
@@ -22,11 +22,49 @@ const db = client.db('dailyquiz');
   }
 })();
 
+const http = require('http');
+const { WebSocketServer } = require('ws');
+
+const server = http.createServer(app);
+const wss = new WebSocketServer({ server });
+
+wss.on('connection', (ws) => {
+  console.log('🔌 WebSocket client connected');
+
+  // Send current leaderboard instantly
+  db.collection('streaks')
+    .find({})
+    .sort({ streak: -1 })
+    .limit(10)
+    .toArray()
+    .then(top => {
+      ws.send(JSON.stringify({ type: 'leaderboard', data: top }));
+    });
+
+  ws.send(JSON.stringify({ type: 'connected', msg: 'Connected to leaderboard WebSocket' }));
+});
+function broadcastLeaderboardUpdate() {
+  db.collection('streaks')
+    .find({})
+    .sort({ streak: -1 })
+    .limit(10)
+    .toArray()
+    .then(top => {
+      const msg = JSON.stringify({ type: 'leaderboard', data: top });
+      for (const client of wss.clients) {
+        if (client.readyState === client.OPEN) {
+          client.send(msg);
+        }
+      }
+    });
+}
+
+server.listen(port, () => {
+  console.log(`Startup service listening on http://localhost:${port}`);
+});
 
 const authCookieName = 'token';
 let quizData = {};
-
-const port = process.argv.length > 2 ? process.argv[2] : 4000;
 
 app.use(express.json());
 app.use(cookieParser());
@@ -119,6 +157,7 @@ apiRouter.post('/streak', verifyAuth, async (req, res) => {
     { $set: { streak } },
     { upsert: true }
   );
+  broadcastLeaderboardUpdate();
   res.send({ success: true });
 });
 
